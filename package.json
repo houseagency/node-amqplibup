@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/houseagency/node-amqplibup#readme",
   "dependencies": {
-    "amqplib": "0.5.1",
-    "amqplib-auto-recovery": "0.1.0"
+    "amqplib": "0.5.1"
   }
 }
