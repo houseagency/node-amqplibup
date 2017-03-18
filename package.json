@@ -1,0 +1,23 @@
+{
+  "name": "amqplibup",
+  "version": "1.0.0",
+  "description": "automatic reconnection/retries for amqplib",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houseagency/node-amqplibup.git"
+  },
+  "author": "Alfred Godoy <alfred.godoy@houseagency.se>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/houseagency/node-amqplibup/issues"
+  },
+  "homepage": "https://github.com/houseagency/node-amqplibup#readme",
+  "dependencies": {
+    "amqplib": "0.5.1",
+    "amqplib-auto-recovery": "0.1.0"
+  }
+}
