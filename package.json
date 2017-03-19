@@ -1,6 +1,6 @@
 {
   "name": "amqplibup",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "automatic reconnection/retries for amqplib",
   "main": "index.js",
   "scripts": {

@@ -20,14 +20,27 @@ module.exports = (url, callback) => {
 		try {
 			amqp.connect(url, (err, conn) => {
 				if (err) return retry();
-				conn.on('error', retry);
-				conn.on('close', retry);
+				conn.on('error', err => {
+					if (process.env.DEBUG) {
+						console.error('AMQP Error:', err);
+					}
+					retry();
+				});
+				conn.on('close', () => {
+					if (process.env.DEBUG) {
+						console.error('AMQP Connection closed.');
+					}
+					retry();
+				});
 				if (typeof callback === 'function') {
 					wait = startWait;
 					callback(conn);
 				}
 			});
 		} catch (err) {
+			if (process.env.DEBUG) {
+				console.error('AMQP caught error:', err);
+			}
 			retry();
 		}
 	}

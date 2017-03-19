@@ -22,3 +22,9 @@ amqplibup is a wrapper for [amqplib](https://www.npmjs.com/package/amqplib), pro
 * There is no error argument on the callback, since no errors will ever be
   sent to the callback!
 
+## Debugging
+
+If environment variable `DEBUG` is
+[truthy](https://developer.mozilla.org/en/docs/Glossary/Truthy),
+error log messages will be printed to `stderr` on errors.
+
